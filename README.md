@@ -14,7 +14,7 @@ npm install
  * Crear  una base de datos en MYSQL  con el nombre
    ### no-comas-el-planeta-development
  * importar el archivo  
- ### base-de-datos.sql
+   ### base-de-datos.sql
 
 ```javascript
 npm start
