@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="card-panel purple lighten-2 z-depth-2">
+    PROBANDO MATERIALIZECSS
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col s4">
+            To change this license header, choose License Headers in Project Properties.
+            To change this template file, choose Tools | Templates
+            and open the template in the editor.
+        </div>
+        <div class="col s3">
+            To change this license header, choose License Headers in Project Properties.
+            To change this template file, choose Tools | Templates
+            and open the template in the editor.
+        </div>
+        <div class="col s5">
+            To change this license header, choose License Headers in Project Properties.
+            To change this template file, choose Tools | Templates
+            and open the template in the editor.
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s4">
+            <a href="#" class="btn red darken-2 z-depth-3">BUSCAR</a>
+        </div>
+        <div class="col s4">
+            <a href="#" class="btn-floating"><i class="material-icons">polymer</i></a>
+        </div>
+        <div class="col s4">
+            <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Drop Me!</a>
+
+            <!-- Dropdown Structure -->
+            <ul id='dropdown1' class='dropdown-content'>
+                <li><a href="#!" class="blue darken-3 z-depth-3">one</a></li>
+                <li><a href="#!">two</a></li>
+                <li class="divider"></li>
+                <li><a href="#!">three</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-image waves-effect waves-block waves-light">
+            <img class="activator" src="img/mario.jpg">
+        </div>
+        <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+            <p><a href="#">This is a link</a></p>
+        </div>
+        <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+            <p>Here is some more information about this product that is only revealed once clicked on.</p>
+        </div>
+    </div>
+
+    <div class="chip">
+        <img src="img/imagen1.png" alt="Contact Person">
+        Ricardo paucara
+    </div>
+    <div>
+        <ul class="collapsible popout" data-collapsible="accordion">
+            <li>
+                <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
+                <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+            </li>
+            <li>
+                <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+                <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+            </li>
+            <li>
+                <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+                <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <img class="materialboxed" width="650" src="img/imagen1.png">
+    </div>
+    <div class="parallax-container">
+        <div class="parallax"><img src="img/mario.jpg"></div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('.parallax').parallax();
+    });
+</script>
+<script>
+    $('.button-collapse').sideNav({
+                menuWidth: 300, // Default is 240
+                edge: 'right', // Choose the horizontal origin
+                closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+            }
+    );
+
+</script>
+</body>
+</html>

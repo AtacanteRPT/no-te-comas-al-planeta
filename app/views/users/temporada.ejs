@@ -1,0 +1,119 @@
+<html>
+
+<head>
+  <% include ../partes/imports%>
+</head>
+
+<body>
+  <% include ../partes/header %>
+
+    <div class="ui header container">
+      <h3 class="ui header">Se encuentra en la Temporada :
+        <%=presupuestos[0].nombreTemporada%>
+      </h3>
+      <div class="ui three cards">
+        <%for(var i = 0 ; i < presupuestos.length ; i++){%>
+          <div class=" teal card">
+            <div class="content">
+              <div class="header">
+                <%=presupuestos[i].nombre%>
+              </div>
+              <div class="meta">
+                <span class="category">somos Masistas</span>
+              </div>
+              <div class="description">
+
+              </div>
+            </div>
+            <div class="extra content">
+              <div class="ui icon top left pointing dropdown button">
+                <i class="wrench icon"></i>
+                <div class="menu">
+                  <div class="header">Empleados</div>
+                  <div class="item">
+                    <i class="dropdown icon"></i>
+                    <span class="text">Empleado X</span>
+                    <div class="menu">
+                      <div class="item">
+                        <i class="check icon"></i> Ver Perfil
+                      </div>
+                      <div class="item">
+                        <i class="close icon"></i> Eliminar
+                      </div>
+                    </div>
+                  </div>
+                  <div class="ui divider"></div>
+                  <div onclick="adicionarEmpleado('<%=presupuestos[i].idPre%>','<%=idEmpr%>','<%=idTemp%>')" class=" ui button violet">Adicionar Empleado</div>
+                </div>
+              </div>
+              <div class="left floated ">
+                <a class="ui violet button" href="/users/panel/<%=idEmpr%>/<%=idTemp%>/<%=presupuestos[i].idPre%>">Accesar</a>
+              </div>
+
+              <div class="right floated author">
+                <img class="ui avatar image" src="/images/matt.jpg">
+                <%=user.nombre%>
+              </div>
+            </div>
+          </div>
+          <%}%>
+      </div>
+      <br>
+      <br>
+      <%if(presupuestos[0].tipo == 'Empleado'){ %>
+
+        <a href="#" class="ui button blue "> Lista De Empleados</a>
+        <%}%>
+          <!--MODAL adicionarEmpleado-->
+          <div class='ui   modal' id='adicionarEmpleado'>
+            <div class="ui header centered container">
+              <form class="ui form">
+                <div class="field">
+                  <label>Correo del Empleado </label>
+                  <input type="text" id='email' name="nombreTemporada" placeholder="Correo del Empleado a Añadir">
+                </div>
+                <div class="ui button blue " onclick="enviarDatos($('#email').val())">Enviar</div>
+              </form>
+            </div>
+          </div>
+
+    </div>
+    <script>
+    var idPre ;
+    var idTemp;
+    var idEmpr;
+      function adicionarEmpleado(idPreX,idEmprX,idTempX) {
+        idPre = idPreX;
+        idEmpr = idEmprX;
+        idTemp = idTempX;
+         $('#adicionarEmpleado').modal('show');
+        }
+
+        function enviarDatos(email) {
+        var email = email;
+         var parametros = {
+                "idEmpr":idEmpr,
+                "idPre" : idPre,
+                "idTemp" : idTemp,
+                "correo" : email
+            };
+         $.ajax({
+                type: 'POST',
+                url: '/users/panel/temporada/adicionarEmpleado',
+                data:JSON.stringify(parametros),
+                contentType:"application/json; charset=utf-8",
+                traditional: true,
+                success: function(data) {
+                   window.location = data.redirect; 
+                },
+                error: function(jqXHR, textStatus, err) {
+                    alert('text status ' + textStatus + ', err ' + err)
+                }
+
+            });
+        }
+      $('.ui.dropdown').dropdown();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+a p{
+ 
+  color: white;
+  font-size: 21px;
+}
+
+h2,h3,h4,h5{
+  font-family: 'Electrolize', sans-serif;   
+  color:teal ;
+}
+
+body{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.header {
+font-family: 'Electrolize', sans-serif;
+}
+
+#img {
+width: 100%;
+max-height:125px;
+}
+
+ /*.collection-item {
+   opacity: 0;
+ }*/
+
+h2{
+  color: white;
+
+ }
+/*
+ .geo col collection a{
+   color: white;
+ }*/

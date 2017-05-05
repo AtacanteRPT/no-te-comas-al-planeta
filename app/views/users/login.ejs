@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <% include ../partes/imports%>
+
+</head>
+
+<body class="white">
+    <% include ../partes/header %>
+        <div class="container">
+
+            <h2 class="titulo"> LOGEARSE</h2>
+            <%if (mensaje.length > 0) { %>
+                <div class="card green">
+                    <p>Se Ha Registrado Correctamente. YA PUEDE LOGEARSE!!</p>
+                </div>
+                <%}%>
+                    <div class="row">
+                        <form method="POST" class="col s12 white">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="email" type="email"  name='username' class="validate">
+                                    <label for="email">Email</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class=" input-field col s12">
+                                    <input id="password" type="password" name='password' class="validate">
+                                    <label for="password">Password</label>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class=" input-field col s12">
+                                    <button class="btn" type="submit">Entrar</button>
+                                </div>
+                            </div>
+                        </form>
+                        <%if (autoMensaje.length > 0) { %>
+
+                            <div class="chip red">
+                                <div class="header">Error en el usuario o Contraseña </div>
+                                <p>En tu mente esta poder Recordar </p>
+                            </div>
+
+                            <%}%>
+                    </div>
+
+
+        </div>
+
+</body>
+
+</html>

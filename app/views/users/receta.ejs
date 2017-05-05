@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../partes/imports%>
+
+</head>
+
+<body class="white">
+
+    <div class="parallax-container ">
+        <h3 class="titulo-2"> <%=alternativa.nombre%></h3>
+        <div class="parallax"><img src="/img/frutas1.jpg"></div>
+    </div>
+    <div class="brown lighten-4">
+
+            <% include ../partes/header %>
+
+
+        <div class="row">
+            <div class="input-field col s6">
+                <br>
+                <img src="/img/patatas-revolconas.jpg" width="930" height="700">
+            </div>
+            <div class="input-field col s6">
+                <h1>INGREDIENTES</h1>
+                <h4><%=alternativa.ingredientes%></h4>
+               
+                    
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <h1>PREPARACION</h1>
+                <font face="Comic Sans MS,arial,verdana">
+                <h5><p><%=alternativa.preparacion%></p></h5></font>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+    <div class="parallax-container">
+        <div class="parallax"><img src="/img/vegetales.jpg"></div>
+    </div>
+
+</body>
+
+</html>

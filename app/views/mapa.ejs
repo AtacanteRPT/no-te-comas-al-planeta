@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ./partes/imports %>
+    
+</head>
+
+<body class="grey lighten-3">
+  <% include ./partes/header %>
+
+    <div class="row">
+        <div class="col m6">
+
+            <div class="card">
+                <div class="card-image">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d92791.74178675677!2d-68.14874463539638!3d-16.510348864656148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2ses!4v1493584867282"
+                        width="100%" height="400px" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    <span class="card-title">Card Title</span>
+                </div>
+
+                <div class="card-content">
+                    <ul class="collection">
+                        <li class="collection-item dismissable red">
+                            <div>Critico<a href="#!" class="secondary-content"><i class="material-icons circle white">my_location</i></a></div>
+                        </li>
+                        <li class="collection-item dismissable yellow">
+                            <div>Zona de Peligro<a href="#!" class="secondary-content"><i class="material-icons circle ">my_location</i></a></div>
+                        </li>
+                        <li class="collection-item dismissable blue">
+                            <div>Normal<a href="#!" class="secondary-content"><i class="material-icons circle ">my_location</i></a></div>
+                        </li>
+                        <li class="collection-item dismissable grey">
+                            <div>Falta de Carne<a href="#!" class="secondary-content"><i class="material-icons circle ">my_location</i></a></div>
+                        </li>
+                    </ul>
+
+                    <ul class="collection">
+
+                        <li class="collection-item avatar">
+                            <i class=" material-icons  circle red">my_location</i>
+                            <span class="title">Lugar Critico</span>
+
+                        </li>
+                        <li class="collection-item avatar">
+                            <i class="material-icons circle yellow">my_location</i>
+                            <span class="title">Zona de Peligro</span>
+
+                        </li>
+                        <li class="collection-item avatar">
+                            <i class="material-icons circle blue">my_location</i>
+                            <span class="title">Normal</span>
+
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-action">
+                    <a href="#">This is a link</a>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="col m6">
+            <div class="card">
+                <ul id="tabs-swipe-demo" class="tabs ">
+                    <li class="tab col s3"><a class="active" href="#test-swipe-1">Zonas</a></li>
+                    <li class="tab col s3"><a  href="#test-swipe-2">Ciudades</a></li>
+                    <li class="tab col s3"><a href="#test-swipe-3">Departamentos</a></li>
+                </ul>
+            </div>
+
+            <div id="test-swipe-1" class="col s12 ">
+                <form>
+                    <div class="input-field white z-depth-1 ">
+                        <input id="search" type="search" required>
+                        <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                        <i class="material-icons">close</i>
+                    </div>
+                </form>
+                <div class="row">
+                    <div class="col s12 m6">
+                        <div class="card blue-grey darken-1">
+                            <div class="card-content white-text">
+                                <span class="card-title">ACHACHICALA</span>
+                                <p>
+                                    <ul>
+                                        <li>Agua desperdiciada
+                                            <h6>50000 L dia</h6>
+                                        </li>
+                                        <li>Tierra en Decierto
+                                            <h6>30000 mtr2</h6>
+                                        </li>
+                                        <li>Calentamiento Global
+                                            <h6>500 Automoviles</h6>
+                                        </li>
+
+                                    </ul>
+                                </p>
+                                <div class="card-action">
+                                    <a href="#">PORQUE ?</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m6">
+                        <div class="card blue-grey darken-1">
+                            <div class="card-content white-text">
+                                <span class="card-title">ZONA SUR</span>
+                                <p>
+                                    <ul>
+                                        <li>Agua desperdiciada
+                                            <h5>50000 L dia</h5>
+                                        </li>
+                                        <li>Tierra en Decierto
+                                            <h5>30000 mtr2</h5>
+                                        </li>
+                                        <li>Calentamiento Global
+                                            <h5>500 Automoviles</h5>
+                                        </li>
+
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m6">
+                        <div class="card blue-grey darken-1">
+                            <div class="card-content white-text">
+                                <span class="card-title">PERIFERIA</span>
+                                <p>
+                                    <ul>
+                                        <li>Agua desperdiciada
+                                            <h5>50000 L dia</h5>
+                                        </li>
+                                        <li>Tierra en Decierto
+                                            <h5>30000 mtr2</h5>
+                                        </li>
+                                        <li>Calentamiento Global
+                                            <h5>500 Automoviles</h5>
+                                        </li>
+
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div id="test-swipe-2" class="col s12 ">
+                <form>
+                    <div class="white input-field z-depth-1">
+                        <input id="search" type="search" required>
+                        <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                        <i class="material-icons">close</i>
+                    </div>
+                </form>
+            </div>
+            <div id="test-swipe-3" class="col s12 ">Test 3</div>
+        </div>
+    </div>
+</body>
+
+</html>

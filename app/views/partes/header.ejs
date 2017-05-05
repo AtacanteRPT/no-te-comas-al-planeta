@@ -1,0 +1,25 @@
+<ul id="dropdown1" class="dropdown-content">
+    <li><a href="/auth/crear-receta">Agregar Receta</a></li>
+  <li class="divider"></li>
+  <li><a href="/auth/cerrar">Cerrar Sesión</a></li>
+
+</ul>
+<nav class=" teal lighten-1 ">
+  <div class="nav-background ">
+    <ul class="left hide-on-med-and-down">
+      <li><a href="/" class='titulo brand-logo' style="color: white">NO TE COMAS AL PLANETA</a></li>
+    </ul>
+    <ul class="right hide-on-med-and-down">
+      <li><a href="#ad">Acerca de </a></li>
+      <li><a href="#c">Conocenos</a></li>
+      <li class="divider"></li>
+      <li><a href="#ct">Contactanos</a></li>
+      <li><a href="/calculadora">Calculadora</a></li>
+      <li><a href="/mapa">Georeferenciado</a></li>
+      <% if (estaAutentificado){ %>
+        <li><a class="dropdown-button" href="#!" data-activates="dropdown1"><%=user.nombre%><i class="material-icons right">arrow_drop_down</i></a></li>
+      <%}%>
+    </ul>
+
+  </div>
+</nav>

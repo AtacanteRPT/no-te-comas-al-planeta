@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <% include ./partes/imports %>
+    <link href="css/styleCal.css" type="text/css" rel="stylesheet" media="screen,projection" />
+
+</head>
+
+<body>
+  <% include ./partes/header %>
+    <div class="card grey lighten-3">
+      <div class="row">
+
+        <div class="col s4 m3">
+          <h3> Calculadora</h3>
+          <div class="row">
+            <div class="col s6">
+              <a href="#test1"><img id='img' src="img/res.jpg" /></a>
+            </div>
+            <div class="col s6 "><img id='img' src="img/cerdo.jpg" /></div>
+          </div>
+
+          <div class="row">
+            <div class="col s6"><img id='img' src="img/pollo.jpg" /></div>
+            <div class="col s6 "><img id='img' src="img/pescado.jpg" /></div>
+
+          </div>
+          <div class="row">
+            <div class="col s6"><img id='img' src="img/cordero.jpg" /></div>
+            <div class="col s6 "><img id='img' src="img/pescado.jpg" /></div>
+
+          </div>
+        </div>
+
+        <div class="col s4 m5">
+          <div class="row">
+            <div class="input-field col s12 m6">
+              <select class="icons">
+      <option value="" disabled selected>Elige Que Comera</option>
+      <option value="" data-icon="img/pollo.jpg" class="left circle">Pollo</option>
+      <option value="" data-icon="img/cerdo.jpg" class="left circle">Cerdo</option>
+      <option value="" data-icon="img/res.jpg" class="left circle">Res</option>
+      <option value="" data-icon="img/cordero.jpg" class="left circle">Cordero</option>
+      <option value="" data-icon="img/res.jpg" class="left circle">example 3</option>
+                       </select>
+              <label>Selecciona la Imagen</label>
+            </div>
+            <div class="input-field col s12 m12">
+
+              <p> La Porcion en Gramos (gr)</p>
+              <form action="#">
+                <p class="range-field">
+                  <input type="range" id="test5" min="0" max="100" />
+                </p>
+              </form>
+              <a href="#!" class="btn" onclick="Materialize.showStaggeredList('#colection')"><i class="material-icons left">report_problem</i>Impacto</a>
+
+            </div>
+
+          </div>
+
+
+          <!--************************************** IMPACTO *******************************************-->
+          <ul class="collection">
+
+            <li class="collection-item avatar z-depth-2">
+              <img src="img/agua.jpg" alt="" class="circle">
+              <span class="title">2000 litros de agua dulce desperdiciada</span>
+              <p>un cerdo consume 5 litros de agua al dia<br> este total de agua puede ser consumida por 5 niños
+              </p>
+              <a href="#!" class="secondary-content">Por Que?</a>
+            </li>
+            <li class="collection-item avatar">
+              <img src="img/tierra.jpg" alt="" class="circle">
+              <span class="title">1500km cuandrados destruidos</span>
+              <p>un cerdo consume 13m cuadrados al dia<br> ese total de metros son los que se destruye para su crianza
+              </p>
+              <a href="#!" class="secondary-content">Por Que?</a>
+            </li>
+            <li class="collection-item avatar">
+              <img src="img/gas.png" alt="" class="circle">
+              <span class="title">3 metros cubicos de metano al dia</span>
+              <p>se causa gran daño al ozono <br> este total de gas emitido es igual a la de 2000 automobiles
+              </p>
+              <a href="#!" class="secondary-content">Por Que?</a>
+            </li>
+          </ul>
+
+        </div>
+
+
+        <div class="col m4 s12">
+
+          <div class="input-field col s12">
+          <i class="material-icons prefix">textsms</i>
+          <input type="text" id="autocomplete-input" class="autocomplete">
+          <label for="autocomplete-input">Autocomplete</label>
+        </div>
+          <h5 class="header">ALTERNATIVAS</h5>
+
+          <% for(var i=alternativas.length-1 ; i >=0; i--){%>
+            <div class="card horizontal">
+              <div class="card-image">
+                <img src="/img/pollo.jpg">
+              </div>
+              <div class="card-stacked">
+                <div class="card-content">
+                  <p><%=alternativas[i].nombre%></p>
+                  <div class="chip">
+                    <img src="img/yuna.jpg" alt="Contact Person"> <%=alternativas[i].usuario.nombre %>
+                  </div>
+                </div>
+                <div class="card-action">
+                  <%=alternativas[i].id%>
+                  <a href="/alternativas/<%=alternativas[i].id %>">Ver receta</a>
+                </div>
+              </div>
+            </div>
+            <%}%>
+
+
+        </div>
+      </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+          $('input.autocomplete').autocomplete({
+    data: <%=listaAlternativas%>,
+    limit: 20, // The max amount of results that can be shown at once. Default: Infinity.
+    onAutocomplete: function(val) {
+      // Callback function when value is autcompleted.
+    },
+    minLength: 1, // The minimum length of the input for the autocomplete to start. Default: 1.
+  });
+   
+  });
+    
+    </script>
+
+</body>
+
+</html>
